@@ -1,14 +1,14 @@
 .btn {
-  font-family: Kanit;
-  letter-spacing: toRem(6.88);
-  padding: toRem(7) toRem(31);
-  border-radius: toRem(100);
-  border: toRem(1) solid #6d7d7d;
-  background: rgba(255, 255, 255, 0);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+	font-family: Kanit;
+	letter-spacing: toRem(6.88);
+	padding: toRem(7) toRem(31);
+	border-radius: toRem(100);
+	border: toRem(1) solid #6d7d7d;
+	background: rgba(255, 255, 255, 0);
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
 }
 .btn:hover {
-  background: rgba(255, 255, 255, 0.2);
-  color: #fff;
+	background: rgba(255, 255, 255, 0.2);
+	color: #fff;
 }
