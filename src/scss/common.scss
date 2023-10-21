@@ -1,0 +1,29 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.none {
+	display: none!important;
+}
+
+
+.btn {
+	font-family: Kanit;
+	letter-spacing: toRem(6.88);
+	padding: toRem(7) toRem(31);
+	border-radius: toRem(100);
+	flex: 0 0 auto; // чтобы текст в кнопке не складывался
+	border: toRem(1) solid #6d7d7d;
+	background: rgba(255, 255, 255, 0);
+	transition: all 0.3s;
+	&:hover {
+		background: rgba(255, 255, 255, 0.2);
+		color: #fff;
+	}
+}
+
+.title {
+	font-family: Kanit;
+	font-size: toRem(40);
+	@include adaptiveValue("font-size", 40, 30);
+}
+.text {
+	font-family: Nunito;
+}
