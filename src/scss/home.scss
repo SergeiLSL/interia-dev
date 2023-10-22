@@ -6,6 +6,9 @@
 	// .page__clients
 	&__clients {
 	}
+	// .page__design
+	&__design {
+	}
 	// .page__blog
 	&__blog {
 	}
@@ -148,6 +151,62 @@
 }
 //=========================================================================================
 //=========================================================================================
+// .page__design
+.design {
+	@include adaptiveValue("padding-top", 100, 30);
+	@include adaptiveValue("padding-bottom", 50, 25);
+	// .design__container
+	&__container {
+	}
+	// .design__item
+	&__item {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: toRem(25);
+		align-items: center;
+		@media (max-width: toRem(1100)) {
+			gap: toRem(20);
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: auto;
+			row-gap: toRem(20);
+		}
+		@include adaptiveValue("padding-bottom", 65, 25);
+	}
+	// .design__name
+	&__name {
+		font-family: Kanit;
+		@include adaptiveValue("font-size", 40, 30);
+		@media (max-width: $mobile) {
+			@include adaptiveValue("padding-left", 30, 0);
+		}
+	}
+	// .design__body
+	&__body {
+		@include adaptiveValue("padding-left", 150, 30, 0, 1170, 768);
+		@media (max-width: $mobile) {
+			@include adaptiveValue("padding-left", 30, 0);
+		}
+	}
+	// .design__text
+	&__text {
+		&:not(:last-child) {
+			margin-bottom: toRem(22);
+		}
+	}
+	// .design__link
+	&__link {
+		font-family: Kanit;
+		letter-spacing: toRem(6.88);
+		text-transform: uppercase;
+		background: url("@img/blog/arrow-right.svg") right center no-repeat;
+		padding-right: toRem(16);
+		padding-bottom: toRem(1);
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
 
 //=========================================================================================
 //=========================================================================================
@@ -230,8 +289,6 @@
 	}
 	// .item-blog__text
 	&__text {
-		color: #6d7d7d;
-		font-family: Nunito;
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 35, 25);
 		}
