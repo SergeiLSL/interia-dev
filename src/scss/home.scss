@@ -3,6 +3,12 @@
 	// .page__hero
 	&__hero {
 	}
+	// .page__clients
+	&__clients {
+	}
+	// .page__newsletter
+	&__newsletter {
+	}
 }
 //====================================================================================================
 // .page__hero
@@ -139,3 +145,61 @@
 }
 //=========================================================================================
 //=========================================================================================
+// .page__newsletter
+.newsletter {
+	@include adaptiveValue("padding-top", 75, 25);
+	@include adaptiveValue("padding-bottom", 75, 25);
+	// .newsletter__container
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: toRem(30);
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			row-gap: toRem(20);
+		}
+	}
+	// .newsletter__title
+	&__title {
+	}
+	// .newsletter__subscribe
+	&__subscribe {
+		flex: 0 1 toRem(765);
+		max-width: toRem(765);
+		@media (max-width: $mobile) {
+			flex: 0 1 auto;
+			width: 100%;
+		}
+	}
+}
+
+.subscribe {
+	display: flex;
+	padding: toRem(7) 0;
+	// flex: 0 1 toRem(765);
+	gap: toRem(20);
+	@media (max-width: $mobileSmall) {
+		flex-direction: column;
+	}
+	// .subscribe__input
+	&__input {
+		font-family: Nunito;
+		max-width: toRem(522);
+		width: 100%;
+		height: toRem(39);
+		border-bottom: toRem(1) solid #6d7d7d;
+		padding: 0 toRem(24);
+		color: #fff;
+		background-color: transparent;
+		&::placeholder {
+			color: #fff;
+		}
+	}
+	// .subscribe__button
+	&__button {
+		padding: toRem(7) toRem(47);
+		@include adaptiveValue("padding-left", 47, 20);
+		@include adaptiveValue("padding-right", 47, 20);
+	}
+}
