@@ -19,12 +19,24 @@
 	}
 }
 
+.subtitle {
+	font-family: Kanit;
+	text-align: center;
+	letter-spacing: toRem(6.88);
+	text-transform: uppercase;
+	color: #6d7d7d;
+	line-height: toRem(24);
+}
+
 .title {
 	font-family: Kanit;
 	font-size: toRem(40);
+	// line-height: toRem(60);
 	@include adaptiveValue("font-size", 40, 30);
+	@include adaptiveValue("line-height", 60, 35);
 }
 .text {
 	font-family: Nunito;
 	color: #6d7d7d;
+	line-height: toRem(22);
 }
