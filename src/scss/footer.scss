@@ -118,8 +118,8 @@
 	&__link {
 		flex: 0 0 toRem(36);
 		height: toRem(36);
-		fill: rgba(217, 217, 217, 0.00);
-		border: toRem(1) solid #6D7D7D;
+		fill: rgba(217, 217, 217, 0);
+		border: toRem(1) solid #6d7d7d;
 		border-radius: 50%;
 		display: flex;
 		justify-content: center;
@@ -180,5 +180,10 @@
 	}
 	// .copy-right__link
 	&__link {
+		transition: color 0.3s ease;
+		&:hover {
+			color: rgba(255, 255, 255, 0.65);
+			
+		}
 	}
 }
