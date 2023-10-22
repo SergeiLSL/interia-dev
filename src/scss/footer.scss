@@ -114,8 +114,20 @@
 			margin-bottom: toRem(20);
 		}
 	}
-	// .footer-bg-contact__icon
-	&__icon {
+	// .footer-bg-contact__linkn
+	&__link {
+		flex: 0 0 toRem(36);
+		height: toRem(36);
+		fill: rgba(217, 217, 217, 0.00);
+		border: toRem(1) solid #6D7D7D;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: border 0.3s ease 0s;
+		&:hover {
+			border: toRem(1) solid rgba(255, 255, 255, 1);
+		}
 	}
 	// .footer-bg-contact__text
 	&__text {
