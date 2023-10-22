@@ -6,6 +6,9 @@
 	// .page__clients
 	&__clients {
 	}
+	// .page__blog
+	&__blog {
+	}
 	// .page__newsletter
 	&__newsletter {
 	}
@@ -145,6 +148,109 @@
 }
 //=========================================================================================
 //=========================================================================================
+
+//=========================================================================================
+//=========================================================================================
+
+//=========================================================================================
+//=========================================================================================
+// .page__blog
+.blog {
+	@include adaptiveValue("padding-top", 50, 25);
+	padding-bottom: toRem(25);
+	// background-color: #d7d7d7;
+	// .blog__container
+	&__container {
+	}
+	// .blog__subtitle
+	&__subtitle {
+		font-family: Kanit;
+		text-align: center;
+		letter-spacing: toRem(6.88);
+		text-transform: uppercase;
+		color: #6d7d7d;
+	}
+	// .blog__title
+	&__title {
+		text-align: center;
+		line-height: toRem(60);
+		@include adaptiveValue("margin-bottom", 35, 20);
+	}
+	// .blog__items
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: toRem(25);
+		@media (max-width: toRem(1100)) {
+			gap: toRem(20);
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: auto;
+			row-gap: toRem(35);
+		}
+		@include adaptiveValue("padding-bottom", 65, 25);
+	}
+	// .blog__item
+	&__item {
+	}
+}
+
+.item-blog {
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	// .item-blog__header
+	&__header {
+		position: relative;
+	}
+	// .item-blog__image
+	&__image {
+		display: block;
+		position: relative;
+		padding-bottom: 73.829201%; /* 268/363 */
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+		}
+	}
+	// .item-blog__body
+	&__body {
+		padding: toRem(35) toRem(18);
+		@media (max-width: toRem(1100)) {
+			padding: toRem(25) toRem(15);
+		}
+	}
+	// .item-blog__link-title
+	&__link-title {
+	}
+	// .item-blog__text
+	&__text {
+		color: #6d7d7d;
+		font-family: Nunito;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 35, 25);
+		}
+	}
+	// .item-blog__link
+	&__link {
+		font-family: Kanit;
+		letter-spacing: toRem(6.88);
+		text-transform: uppercase;
+		background: url("@img/blog/arrow-right.svg") right center no-repeat;
+		padding-right: toRem(16);
+		padding-bottom: toRem(1);
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+//=========================================================================================
+//=========================================================================================
 // .page__newsletter
 .newsletter {
 	@include adaptiveValue("padding-top", 75, 25);
@@ -203,3 +309,5 @@
 		@include adaptiveValue("padding-right", 47, 20);
 	}
 }
+//=========================================================================================
+//=========================================================================================
