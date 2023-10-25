@@ -4,6 +4,7 @@
 }
 
 .btn {
+	display: inline-block;
 	font-family: Kanit;
 	text-transform: uppercase;
 	letter-spacing: toRem(6.88);
@@ -40,3 +41,50 @@
 	color: #6d7d7d;
 	line-height: toRem(22);
 }
+
+// .btn {
+// 	display: inline-block;
+// 	font-family: Kanit;
+// 	text-transform: uppercase;
+// 	letter-spacing: toRem(6.88);
+// 	padding: toRem(7) toRem(31);
+// 	border-radius: toRem(100);
+// 	flex: 0 0 auto; // чтобы текст в кнопке не складывался
+// 	border: toRem(1) solid #6d7d7d;
+// 	// background: rgba(255, 255, 255, 0);
+// 	background-color: #007397;
+// 	// transition: all 0.3s;
+// 	position: relative;
+// 	&::after {
+// 		content: "";
+// 		width: 0;
+// 		position: absolute;
+// 		transition: all 0.3s;
+// 		height: 100%;
+// 		left: -50%;
+// 		top: 0;
+// 		background-color: #00526b;
+// 	}
+// 	span {
+// 		position: relative;
+// 		z-index: 2;
+// 	}
+// 	&:hover {
+// 		&::after {
+// 			left: 0;
+// 			width: 100%;
+// 		}
+// 	}
+// }
+
+		// position: relative;
+		// &::after {
+		// 	position: absolute;
+		// 	content: "";
+		// 	height: toRem(1);
+		// 	background-color: #fff;
+		// 	bottom: 0;
+		// 	left: 50%;
+		// 	width: 0;
+		// 	transition: all 0.3s;
+		// }
