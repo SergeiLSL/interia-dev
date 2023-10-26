@@ -105,13 +105,20 @@
 	}
 	// .footer-bg-contact__item
 	&__item {
+		display: flex;
+		width: 100%;
+		column-gap: toRem(55);
+		row-gap: toRem(10);
+		justify-content: center;
 	}
 	// .footer-bg-contact__social
 	&__social {
 		display: flex;
+		width: 100%;
 		column-gap: toRem(20);
 		@media (max-width: $mobile) {
 			margin-bottom: toRem(20);
+			justify-content: center;
 		}
 	}
 	// .footer-bg-contact__linkn
@@ -183,7 +190,6 @@
 		transition: color 0.3s ease;
 		&:hover {
 			color: rgba(255, 255, 255, 0.65);
-			
 		}
 	}
 }
