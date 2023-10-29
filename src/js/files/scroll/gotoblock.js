@@ -1,11 +1,11 @@
-// Підключення функціоналу "Чертоги Фрілансера"
+// Подключение функционала "Чертоги Фрилансера"
 import { isMobile, menuClose, getHash, FLS } from "../functions.js";
-// Підключення доповнення для збільшення можливостей
+// Подключение дополнения для увеличения возможностей
 // Документація: https://github.com/cferdinandi/smooth-scroll
 // import SmoothScroll from 'smooth-scroll';
 //==============================================================================================================================================================================================================================================================================================================================
 
-// Модуль плавної проктутки до блоку
+// Модуль плавной проктрутки к блоку
 export let gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0) => {
 	const targetBlockElement = document.querySelector(targetBlock);
 	if (targetBlockElement) {
@@ -33,14 +33,14 @@ export let gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 
 			offset: offsetTop,
 			easing: 'easeOutQuad',
 		};
-		// Закриваємо меню, якщо воно відкрите
+		// Закрываем меню, если оно открыто
 		document.documentElement.classList.contains("menu-open") ? menuClose() : null;
 
 		if (typeof SmoothScroll !== 'undefined') {
-			// Прокручування з використанням доповнення
+			// Прокрутка с использованием дополнения
 			new SmoothScroll().animateScroll(targetBlockElement, '', options);
 		} else {
-			// Прокручування стандартними засобами
+			// Прокрутка стандартными средствами
 			let targetBlockElementPosition = targetBlockElement.getBoundingClientRect().top + scrollY;
 			targetBlockElementPosition = headerItemHeight ? targetBlockElementPosition - headerItemHeight : targetBlockElementPosition;
 			targetBlockElementPosition = offsetTop ? targetBlockElementPosition - offsetTop : targetBlockElementPosition;
@@ -49,8 +49,8 @@ export let gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 
 				behavior: "smooth"
 			});
 		}
-		FLS(`[gotoBlock]: Юхуу...їдемо до ${targetBlock}`);
+		FLS(`[gotoBlock]: Юхуу... Идем до блока ${targetBlock}`);
 	} else {
-		FLS(`[gotoBlock]: Йой... Такого блоку немає на сторінці: ${targetBlock}`);
+		FLS(`[gotoBlock]: Ой... Такого блоку нет на странице: ${targetBlock}`);
 	}
 };

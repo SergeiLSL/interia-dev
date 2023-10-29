@@ -48,8 +48,8 @@
 		font-family: Kanit;
 		color: #fff;
 		letter-spacing: toRem(6.88);
-		position: relative;
-		z-index: 5;
+		// position: relative;
+		z-index: 6;
 	}
 	// .header__menu
 	&__menu {
@@ -58,7 +58,7 @@
 	}
 	// .header__buttons
 	&__buttons {
-	}	
+	}
 	// .header__btn
 	&__btn {
 	}
@@ -70,6 +70,9 @@
 		@include adaptiveValue("padding-right", 31, 20, 0, 1920, 992);
 		z-index: 5;
 		margin-left: toRem(52);
+		@media (max-width: $mobileSmall) {
+			display: none;
+		}
 	}
 }
 .menu {
@@ -113,7 +116,7 @@
 		}
 		@media (max-width: $mobile) {
 			font-size: toRem(28);
-		}		
+		}
 	}
 	// .menu__icon
 	&__icon {
