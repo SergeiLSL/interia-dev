@@ -102,7 +102,7 @@ class Popup {
 		this.options.init ? this.initPopups() : null
 	}
 	initPopups() {
-		this.popupLogging(`Прокинувся`);
+		this.popupLogging(`Проснулся`);
 		this.eventsPopup();
 	}
 	eventsPopup() {
@@ -250,9 +250,9 @@ class Popup {
 						popup: this
 					}
 				}));
-				this.popupLogging(`Відкрив попап`);
+				this.popupLogging(`Открыл попап`);
 
-			} else this.popupLogging(`Йой, такого попапу немає. Перевірте коректність введення. `);
+			} else this.popupLogging(`Ой, такого попа нет. Проверьте правильность ввода.`);
 		}
 	}
 	close(selectorValue) {
@@ -355,7 +355,7 @@ class Popup {
 			focusable[0].focus();
 		}
 	}
-	// Функція виведення в консоль
+	// Функция вывода в консоль
 	popupLogging(message) {
 		this.options.logging ? FLS(`[Попапос]: ${message}`) : null;
 	}

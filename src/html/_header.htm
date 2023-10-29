@@ -1,34 +1,40 @@
-<header data-lp data-scroll="140" data-scroll-show class="header">
+<header data-lp data-scroll="100" data-scroll-show class="header">
 	<div class="header__container">
-		<a href="#" class="header__logo">INTERIA</a>
+		<div class="header__inner">
+			<a href="#" class="header__logo">INTERIA</a>
 
-		<nav class="header__menu menu">
-			<div class="menu__body">
-				<ul class="menu__list">
-					<li class="menu__item">
-						<a data-goto=".hero" href="#" class="menu__link">home</a>
-					</li>
-					<li class="menu__item">
-						<a data-goto=".about" href="#" class="menu__link">pages</a>
-					</li>
-					<li class="menu__item">
-						<a data-goto=".design" href="#" class="menu__link">services</a>
-					</li>
-					<li class="menu__item">
-						<a data-goto=".team" href="#" class="menu__link">team</a>
-					</li>
-					<li class="menu__item">
-						<a data-goto=".blog" href="#" class="menu__link">blog</a>
-					</li>
-				</ul>
+			<nav class="header__menu menu">
+				<div class="menu__body">
+					<ul class="menu__list">
+						<li class="menu__item">
+							<a data-goto=".hero" href="#" class="menu__link">home</a>
+						</li>
+						<li class="menu__item">
+							<a data-goto-header data-goto=".about" href="#" class="menu__link">pages</a>
+						</li>
+						<li class="menu__item">
+							<a data-goto-header data-goto=".design" href="#" class="menu__link">services</a>
+						</li>
+						<li class="menu__item">
+							<a data-goto-header data-goto-top="30" data-goto=".team" href="#" class="menu__link">team</a>
+						</li>
+						<li class="menu__item">
+							<a data-goto-header data-goto=".blog" href="#" class="menu__link">blog</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<div class="header__buttons">
+				<a href="#" type="button" class="header__link btn">GET STARTED</a>
 			</div>
-		</nav>
+			
+			<!-- <button data-popup="#popup" type="button" class="header__link btn">GET STARTED</button> -->
 
-		<div data-da=".menu__list, 500" class="header__btn">
-			<a class="header__button btn"><span>GET STARTED</span></a>
+			<button class="menu__icon icon-menu" type="button">
+				<span class="icon-menu__line"></span>
+			</button>
+
 		</div>
-		<button class="icon-menu" type="button">
-			<span></span>
-		</button>
 	</div>
 </header>

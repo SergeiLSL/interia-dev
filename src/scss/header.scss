@@ -1,21 +1,46 @@
-//====================================================================================================
+//===========================================================================================
+//===========================================================================================
 .header {
-	position: absolute;
-	width: 100%;
+	min-height: toRem(96);
+	background-color: transparent;
+	@include adaptiveValue("padding-right", 40, 0, 2, 1368, 768);
+	@include adaptiveValue("padding-left", 40, 0, 2, 1368, 768);
+	position: fixed;
 	top: 0;
 	left: 0;
+	width: 100%;
 	z-index: 50;
-	@media (max-width: $tablet) {
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: toRem(96);
+		background-color: #6d7d7d; // ? это цвет плашки
+		background-color: transparent;
+		z-index: 2;
+	}
+	&._header-scroll {
 		position: fixed;
-		// background-color: rgba(0, 0, 0, 0.5);
+		top: -200%;
+		background-color: rgba(0, 0, 0, 0.9); // ? это цвет плашки
+	}
+	&._header-show {
+		transition: top 0.5s ease 0s;
+		top: 0;
 	}
 	// .header__container
 	&__container {
+	}
+	// .header__inner
+	&__inner {
 		display: flex;
-		justify-content: space-between;
+		margin: 0 auto;
 		align-items: center;
+		justify-content: space-between;
 		padding-top: toRem(32);
-		padding-bottom: toRem(32);
+		padding-bottom: toRem(31);
 	}
 	// .header__logo
 	&__logo {
@@ -29,9 +54,16 @@
 	// .header__menu
 	&__menu {
 		flex: 1 1 auto;
+		// justify-content: center;
+	}
+	// .header__buttons
+	&__buttons {
+	}	
+	// .header__btn
+	&__btn {
 	}
 	// .header__button
-	&__button {
+	&__link {
 		flex: 0 0 auto; // чтобы текст в кнопке не складывался
 		position: relative;
 		@include adaptiveValue("padding-left", 31, 20, 0, 1920, 992);
@@ -40,15 +72,17 @@
 		margin-left: toRem(52);
 	}
 }
-
 .menu {
-	// .menu__icon
-	&__icon {
+	// .menu__body
+	&__body {
+		position: relative;
+		z-index: 5;
 	}
 	// .menu__list
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
+		align-items: center;
 		@include adaptiveValue("column-gap", 55, 30, 0, 1920, 992);
 		row-gap: toRem(5);
 		justify-content: end;
@@ -56,13 +90,9 @@
 	// .menu__item
 	&__item {
 	}
-	// красивое подчеркивание при hover
 	// .menu__link
 	&__link {
 		color: #fff; //
-		@media (max-width: $mobile) {
-			font-size: toRem(28);
-		}
 		// красивое подчеркивание при hover
 		display: inline-block;
 		padding-bottom: toRem(2.5);
@@ -81,10 +111,16 @@
 			left: 0;
 			width: 100%;
 		}
+		@media (max-width: $mobile) {
+			font-size: toRem(28);
+		}		
+	}
+	// .menu__icon
+	&__icon {
 	}
 }
-//=========================================================
 
+//=========================================================
 //Burger
 
 @media (max-width: $mobile) {
@@ -99,8 +135,8 @@
 	.icon-menu {
 		display: block;
 		flex: 0 0 toRem(30);
-		height: toRem(18); 
-		position: relative; 
+		height: toRem(18);
+		position: relative;
 		z-index: 5;
 		margin-left: toRem(25);
 	}
