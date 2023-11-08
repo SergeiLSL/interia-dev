@@ -164,10 +164,10 @@ flsForms.formFieldsInit({
 // Сниппет(HTML):
 // import './libs/fullpage.js'
 
-// Модуль паралаксу
+// Модуль паралакса
 // Документація: https://template.fls.guru/template-docs/paralaks-pri-skroli.html
 // Сниппет(HTML):
-// import './libs/parallax.js'
+import './libs/parallax.js'
 
 // Функции работы скроллом
 import * as flsScroll from "./files/scroll/scroll.js";
@@ -183,7 +183,7 @@ flsScroll.headerScroll();
 // Функционал липкого блока
 // flsScroll.stickyBlock();
 
-// Модуль анімація цифрового лічильника
+// Анимация цифрового счетчика.
 // Документація: https://template.fls.guru/template-docs/modul-animacii-cifrovogo-lichilnika.html
 // Сніппет(HTML):
 // flsScroll.digitsCounter();

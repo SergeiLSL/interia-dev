@@ -7,7 +7,7 @@
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
-				<section class="page__hero hero">
+				<section data-prlx-parent class="page__hero hero">
 					<div class="hero__container">
 						<div class="hero__row">
 							<div class="hero__item-btn">
@@ -32,7 +32,7 @@
 						</div>
 					</div>
 
-					<div class="hero__image">
+					<div data-prlx class="hero__image">
 						<img src="@img/hero/interior-bg.jpg" alt>
 					</div>
 
@@ -263,17 +263,17 @@
 					</div>
 				</section>
 
-				<section class="page__gallery gallery">
-					<div class="gallery__image">
+				<section data-prlx-parent class="page__gallery gallery">
+					<div data-prlx class="gallery__image">
 						<img src="@img/gallery/interior-1.jpg" alt="Image">
 					</div>
-					<div class="gallery__image">
+					<div data-prlx class="gallery__image">
 						<img src="@img/gallery/interior-2.jpg" alt="Image">
 					</div>
-					<div class="gallery__image">
+					<div data-prlx class="gallery__image">
 						<img src="@img/gallery/interior-3.jpg" alt="Image">
 					</div>
-					<div class="gallery__image">
+					<div data-prlx class="gallery__image">
 						<img src="@img/gallery/interior-4.jpg" alt="Image">
 					</div>
 				</section>
@@ -282,8 +282,8 @@
 					<div class="blog__container">
 						<div class="blog__subtitle subtitle">BLOG</div>
 						<h2 class="blog__title title">The latest article</h2>
-						<div class="blog__items">
-							<article class="blog__item item-blog">
+						<div data-prlx-parent class="blog__items">
+							<article data-prlx class="blog__item item-blog">
 								<div class="item-blog__header">
 									<a href class="item-blog__image">
 										<img src="@img/blog/interior-1.jpg" alt="image">
@@ -296,7 +296,7 @@
 									<a href class="item-blog__link">LEARN MORE</a>
 								</div>
 							</article>
-							<article class="blog__item item-blog">
+							<article data-prlx class="blog__item item-blog">
 								<div class="item-blog__header">
 									<a href class="item-blog__image">
 										<img src="@img/blog/interior-2.jpg" alt="image">
@@ -309,7 +309,7 @@
 									<a href class="item-blog__link">LEARN MORE</a>
 								</div>
 							</article>
-							<article class="blog__item item-blog">
+							<article data-prlx class="blog__item item-blog">
 								<div class="item-blog__header">
 									<a href class="item-blog__image">
 										<img src="@img/blog/interior-3.jpg" alt="image">
@@ -338,8 +338,6 @@
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
-		@@include('html/_popup.htm',{})
 		@@include('html/_js.htm',{})
-
 	</body>
 </html>
